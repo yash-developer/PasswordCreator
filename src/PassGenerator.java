@@ -22,26 +22,29 @@ public class PassGenerator {
 		int symbols, numbers, loCaseChars, upCaseChars;
 		int maxLength;
 		boolean bool = true;
+		Random rand = new Random();
+		Pattern r2;
 		String allChars = "";
 		String Password = "";
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Enter Length of password you want: ");
-		maxLength = scan.nextInt();
 
+		String regexB = "";
 		String Regex_start = "(";
 		String Regex_digits = "(?=.*\\d)";
 		String Regex_symbols = "(?=.*[\\.\\^\\$\\*\\+\\?\\|!#%&\\-=@_~])";
 		String Regex_lowercases = "(?=.*[a-z])";
 		String Regex_uppercases = "(?=.*[A-Z])";
-		String Regex_end = ".{3," + maxLength + "})";
-		String regexB = "";
-		Random rand = new Random();
-		Pattern r2;
 
 		// String regexA =
 		// "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\\.\\^\\$\\*\\+\\?\\|!#%&\\-=@_~]).{8,12})";
-		if (maxLength > 3) {
+		while(true) {
+
+			System.out.print("Enter Length of password you want: ");
+			maxLength = scan.nextInt();
+			String Regex_end = ".{6," + maxLength + "})";
+		
+		if (maxLength > 6) {
 
 			System.out.print("Press 1 to include Symbols: ");
 			symbols = scan.nextInt();
@@ -76,7 +79,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -97,7 +100,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -124,7 +127,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -144,7 +147,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -177,7 +180,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -197,7 +200,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -223,7 +226,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -242,7 +245,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -281,7 +284,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -301,7 +304,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -327,7 +330,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -346,7 +349,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -378,7 +381,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -397,7 +400,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -422,7 +425,7 @@ public class PassGenerator {
 									builder.append(allcharsarr[rand.nextInt(allcharsarr.length)]);
 								}
 								Password = builder.toString();
-								Password = shuffle(Password);
+								Password = reshuffle(Password);
 								Matcher m = r2.matcher(Password);
 								if (m.matches()) {
 									// bool = false;
@@ -437,21 +440,27 @@ public class PassGenerator {
 				}
 			}
 		} else {
-			System.out.println("You should atleast choose a passwords with length more than 8 characters");
+			System.out.println("You should atleast choose a passwords with length more than 6 characters");
 		}
+		System.out.print("\nPress Any number to continue & 1 to exit: ");
+		int tmp = scan.nextInt();
+		if(tmp == 1) {
+			break;
+		}
+	}
 		scan.close();
 	}
 
-	public static String shuffle(String input) {
-		List<Character> characters = new ArrayList<Character>();
-		StringBuilder output = new StringBuilder(input.length());
-		for (char c : input.toCharArray()) {
-			characters.add(c);
+	public static String reshuffle(String in) {
+		List<Character> words = new ArrayList<Character>();
+		StringBuilder builder = new StringBuilder(in.length());
+		for (char c : in.toCharArray()) {
+			words.add(c);
 		}
-		while (characters.size() != 0) {
-			int randPicker = (int) (Math.random() * characters.size());
-			output.append(characters.remove(randPicker));
+		while (words.size() != 0) {
+			int rand = (int) (Math.random() * words.size());
+			builder.append(words.remove(rand));
 		}
-		return output.toString();
+		return builder.toString();
 	}
 }
